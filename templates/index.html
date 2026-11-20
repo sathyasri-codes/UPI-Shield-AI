@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UPI Shield AI | Digital Payment Security</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-logo">🛡️</div>
+            <div>
+                <h2>UPI Shield AI</h2>
+                <p>Digital Payment Security</p>
+            </div>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="sidebar-nav">
+
+            <a href="#dashboard" class="nav-item active">
+                <span>🏠</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#scanner" class="nav-item">
+                <span>🔍</span>
+                <span>Message Scanner</span>
+            </a>
+
+            <a href="#payment-checker" class="nav-item">
+                <span>🔗</span>
+                <span>Payment Link Checker</span>
+            </a>
+
+            <a href="#qr-safety" class="nav-item">
+                <span>▦</span>
+                <span>QR Code Safety</span>
+            </a>
+
+            <a href="#analytics" class="nav-item">
+                <span>📊</span>
+                <span>Security Analytics</span>
+            </a>
+
+            <a href="#features" class="nav-item">
+                <span>💡</span>
+                <span>Safety Tips</span>
+            </a>
+
+            <a href="#about" class="nav-item">
+                <span>ℹ️</span>
+                <span>About</span>
+            </a>
+
+        </nav>
+
+        <!-- SECURITY CENTER -->
+        <div class="sidebar-security">
+
+            <div class="online-status">●</div>
+
+            <h4>Security Center</h4>
+
+            <p>Your digital safety matters.</p>
+
+            <div class="sidebar-shield">🛡️</div>
+
+            <small>Stay Alert. Stay Protected.</small>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN DASHBOARD -->
+    <main class="main-content" id="dashboard">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div class="search-box">
+                <span>⌕</span>
+                <input
+                    type="text"
+                    id="dashboardSearch"
+                    placeholder="Search features..."
+                >
+            </div>
+
+            <div class="top-actions">
+
+                <button
+                    type="button"
+                    class="notification"
+                    aria-label="Notifications"
+                >
+                    🔔
+                    <sup>2</sup>
+                </button>
+
+                <div class="user-profile">U</div>
+
+            </div>
+
+        </header>
+
+
+        <!-- HERO BANNER -->
+        <section class="hero-banner">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    🛡️ AI-POWERED FRAUD DETECTION
+                </span>
+
+                <h1>
+                    Welcome to <span>UPI Shield AI</span>
+                </h1>
+
+                <p>
+                    Detect suspicious messages. Check payment links.
+                    Understand QR code risks and make safer
+                    digital payment decisions.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#scanner" class="scan-now">
+                        🛡️ Scan Now →
+                    </a>
+
+                    <a href="#features" class="learn-more">
+                        Learn More →
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-visual">
+
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+
+                <div class="hero-phone">
+
+                    <div class="phone-top"></div>
+
+                    <div class="phone-text">UPI</div>
+
+                    <div class="phone-shield">✓</div>
+
+                </div>
+
+                <div class="hero-message">
+                    <h2>Stay <span>Safe.</span></h2>
+                    <h2>Pay <span>Smart.</span></h2>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- STATISTICS -->
+        <section class="stats-grid" id="analytics">
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">⌕</div>
+
+                <div class="stat-info">
+                    <p>Scans Performed</p>
+                    <h2 id="totalScans">0</h2>
+                    <small>Total message scans</small>
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="stat-icon red">!</div>
+
+                <div class="stat-info">
+                    <p>Fraud Alerts</p>
+                    <h2 id="fraudAlerts">0</h2>
+                    <small>Potential risks detected</small>
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">✓</div>
+
+                <div class="stat-info">
+                    <p>Security Status</p>
+                    <h2>Active</h2>
+                    <small>Safety guidance available</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MESSAGE SCANNER AND RECENT ACTIVITY -->
+        <section class="main-grid">
+
+            <!-- MESSAGE SCANNER -->
+            <div class="panel scanner-panel" id="scanner">
+
+                <div class="panel-heading">
+
+                    <div>
+                        <h2>
+                            <span class="heading-icon">🔍</span>
+                            Scan a Suspicious Message
+                        </h2>
+
+                        <p>
+                            Paste an SMS, WhatsApp or UPI-related
+                            message to check for suspicious patterns.
+                        </p>
+                    </div>
+
+                    <span class="scanner-badge">
+                        AI Scanner
+                    </span>
+
+                </div>
+
+                <form id="scanForm">
+
+                    <label for="messageInput">
+                        Enter your message
+                    </label>
+
+                    <textarea
+                        id="messageInput"
+                        placeholder="Example: Your bank account will be blocked. Click this link immediately to update your UPI details..."
+                        required
+                    ></textarea>
+
+                    <div class="scanner-bottom">
+
+                        <small>
+                            <span>●</span>
+                            Never enter your UPI PIN, OTP or password.
+                        </small>
+
+                        <button
+                            type="submit"
+                            class="analyse-button"
+                        >
+                            Analyse Message →
+                        </button>
+
+                    </div>
+
+                    <!-- SCAN RESULT -->
+                    <div
+                        id="scanResult"
+                        class="scan-result"
+                        aria-live="polite"
+                    ></div>
+
+                    <!-- WHATSAPP REPORT SHARING -->
+                    <div class="share-report">
+
+                        <p>
+                            Want to share your analysis report?
+                        </p>
+
+                        <button
+                            type="button"
+                            id="shareWhatsappBtn"
+                            class="whatsapp-button"
+                            disabled
+                        >
+                            <span>●</span>
+                            Share Report on WhatsApp
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!-- RECENT ACTIVITY -->
+            <div class="panel activity-panel">
+
+                <div class="activity-heading">
+
+                    <div>
+                        <h2>◷ Recent Activity</h2>
+                        <p>Your latest security checks</p>
+                    </div>
+
+                    <span class="activity-live">
+                        ● Activity
+                    </span>
+
+                </div>
+
+                <div id="activityList">
+
+                    <div class="activity-empty">
+
+                        <span>🛡️</span>
+
+                        <h3>No recent scans</h3>
+
+                        <p>
+                            Your message analysis history
+                            will appear here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PAYMENT LINK CHECKER -->
+        <section
+            class="panel link-checker-section"
+            id="payment-checker"
+        >
+
+            <div class="panel-heading">
+
+                <div>
+                    <h2>
+                        <span class="heading-icon">🔗</span>
+                        Payment Link Checker
+                    </h2>
+
+                    <p>
+                        Check a suspicious payment URL for
+                        warning signs before interacting with it.
+                    </p>
+                </div>
+
+                <span class="scanner-badge">
+                    Link Security
+                </span>
+
+            </div>
+
+            <form id="linkCheckForm">
+
+                <label for="paymentLinkInput">
+                    Enter payment link
+                </label>
+
+                <input
+                    type="url"
+                    id="paymentLinkInput"
+                    placeholder="https://example.com/payment"
+                    required
+                >
+
+                <div class="link-checker-bottom">
+
+                    <small>
+                        ⚠️ Never enter payment credentials.
+                        Do not open unknown links.
+                    </small>
+
+                    <button
+                        type="submit"
+                        class="analyse-button"
+                    >
+                        Check Link →
+                    </button>
+
+                </div>
+
+                <!-- PAYMENT LINK RESULT -->
+                <div
+                    id="linkCheckResult"
+                    class="link-result"
+                    aria-live="polite"
+                ></div>
+
+            </form>
+
+            <div class="link-safety-note">
+
+                <span>🔐</span>
+
+                <div>
+                    <h4>Payment Safety Reminder</h4>
+
+                    <p>
+                        A link that looks genuine may still be unsafe.
+                        Always verify payment requests through
+                        official sources.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QR CODE SAFETY -->
+        <section class="panel qr-section" id="qr-safety">
+
+            <div class="panel-heading">
+
+                <div>
+                    <h2>
+                        <span class="heading-icon">▦</span>
+                        QR Code Safety Checker
+                    </h2>
+
+                    <p>
+                        Upload a QR code image to inspect its
+                        encoded content and receive safety guidance.
+                    </p>
+                </div>
+
+                <span class="scanner-badge">
+                    QR Security
+                </span>
+
+            </div>
+
+            <div class="qr-content">
+
+                <div class="qr-upload-area">
+
+                    <div class="qr-upload-icon">📷</div>
+
+                    <h3>Upload QR Code Image</h3>
+
+                    <p>
+                        Select a QR code image from your device.
+                    </p>
+
+                    <form id="qrUploadForm">
+
+                        <label
+                            for="qrImageInput"
+                            class="qr-upload-button"
+                        >
+                            Choose QR Image
+                        </label>
+
+                        <input
+                            type="file"
+                            id="qrImageInput"
+                            accept="image/*"
+                            hidden
+                        >
+
+                        <p
+                            id="qrFileName"
+                            class="qr-file-name"
+                        >
+                            No image selected
+                        </p>
+
+                        <button
+                            type="submit"
+                            class="analyse-button"
+                        >
+                            Analyse QR Code →
+                        </button>
+
+                    </form>
+
+                </div>
+
+                <div class="qr-information">
+
+                    <div class="qr-info-icon">🛡️</div>
+
+                    <h3>Scan Smart. Stay Safe.</h3>
+
+                    <p>
+                        Before making a QR payment, verify
+                        the recipient and payment amount.
+                    </p>
+
+                    <ul>
+                        <li>Check the payment recipient.</li>
+                        <li>Be careful with unknown QR codes.</li>
+                        <li>Never share your UPI PIN.</li>
+                        <li>Verify unexpected payment requests.</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- QR ANALYSIS RESULT -->
+            <div
+                id="qrResult"
+                class="qr-result"
+                aria-live="polite"
+            ></div>
+
+        </section>
+
+
+        <!-- SECURITY FEATURES -->
+        <section class="features-section" id="features">
+
+            <div class="features-heading">
+
+                <span class="features-symbol">🛡️</span>
+
+                <div>
+                    <h2>Our Security Features</h2>
+
+                    <p>
+                        Advanced tools to help keep you safe
+                        during digital payments.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon blue-bg">⚡</div>
+
+                    <h3>Smart Analysis</h3>
+
+                    <p>
+                        AI helps identify suspicious message
+                        patterns and unusual requests.
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <div class="feature-icon teal-bg">🔒</div>
+
+                    <h3>Risk Detection</h3>
+
+                    <p>
+                        Understand possible risks before
+                        responding to suspicious payment requests.
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <div class="feature-icon orange-bg">💡</div>
+
+                    <h3>Safety Guidance</h3>
+
+                    <p>
+                        Learn useful practices to protect
+                        yourself from digital payment fraud.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CYBER SAFETY BANNER -->
+        <section class="safety-banner">
+
+            <div>
+
+                <span class="safety-label">
+                    🛡️ STAY CYBER SAFE
+                </span>
+
+                <h2>Think Before You Click.</h2>
+
+                <p>
+                    Never share your UPI PIN or OTP.
+                    Verify suspicious messages and payment
+                    requests using official bank channels.
+                </p>
+
+                <a href="#scanner" class="safety-button">
+                    Scan a Message →
+                </a>
+
+            </div>
+
+            <div class="safety-art">🔐</div>
+
+        </section>
+
+
+        <!-- ABOUT SECTION -->
+        <section class="about-section" id="about">
+
+            <h2>About UPI Shield AI</h2>
+
+            <p>
+                UPI Shield AI is a digital payment security
+                project designed to help users identify
+                suspicious messages, inspect payment links,
+                understand QR code risks and learn safer
+                digital payment practices.
+            </p>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            <div class="footer-brand">
+                🛡️ UPI Shield AI
+            </div>
+
+            <p>
+                Building a safer digital payment experience.
+            </p>
+
+            <div class="footer-links">
+
+                <span>© 2026 UPI Shield AI</span>
+
+                <a href="#about">About</a>
+
+                <a href="#features">Safety Tips</a>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
